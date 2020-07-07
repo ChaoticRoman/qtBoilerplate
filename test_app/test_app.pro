@@ -12,3 +12,4 @@ FORMS += mainwindow.ui
 
 INCLUDEPATH += ../library/
 LIBS += -L../library/ -llibrary
+PRE_TARGETDEPS = ../library

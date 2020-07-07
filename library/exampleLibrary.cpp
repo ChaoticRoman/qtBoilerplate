@@ -1,5 +1,7 @@
 #include "exampleLibrary.h"
 
+#include <QDebug>
+
 ExampleLibrary::ExampleLibrary(QObject *parent) : QObject(parent)
 {
     Q_UNUSED(parent)
