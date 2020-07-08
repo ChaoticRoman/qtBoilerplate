@@ -2,38 +2,23 @@
 
 #include <QDebug>
 
-ExampleLibrary::ExampleLibrary(QObject *parent) : QObject(parent)
-{
-    Q_UNUSED(parent)
-}
+ExampleLibrary::ExampleLibrary(QObject *parent) : QObject(parent) {}
 
-
-ExampleLibrary::~ExampleLibrary() {}
-
-
-void ExampleLibrary::set_message(QString message)
-{
+void ExampleLibrary::set_message(QString message) {
     message_ = message;
-    if (message.isEmpty())
-    {
-        if  (timerStarted_)
-        {
+    if (message.isEmpty()) {
+        if  (timerStarted_) {
             killTimer(timerId_);
             timerStarted_ = false;
         }
     }
-    else
-    {
+    else {
         timerId_ = startTimer(100);
         timerStarted_ = true;
     }
 }
 
-
-void ExampleLibrary::timerEvent(QTimerEvent *event)
-{
-    Q_UNUSED(event)
+void ExampleLibrary::timerEvent(QTimerEvent *event) {
+    event->accept();
     emit tick(message_);
 }
-
-#include "moc_exampleLibrary.cpp"

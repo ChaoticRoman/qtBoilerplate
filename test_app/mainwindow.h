@@ -13,10 +13,13 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+    Q_DISABLE_COPY(MainWindow)
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     virtual ~MainWindow();
+    MainWindow(MainWindow&&) = delete;
+    MainWindow& operator=(MainWindow&&) = delete;
 
 public slots:
     void clearText();
@@ -25,6 +28,6 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    ExampleLibrary *instance;
+    ExampleLibrary instance;
 };
 #endif // MAINWINDOW_H

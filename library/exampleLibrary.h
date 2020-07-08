@@ -12,13 +12,15 @@ class ExampleLibrary : public QObject
 
 public:
     explicit ExampleLibrary(QObject *parent = nullptr);
-    virtual ~ExampleLibrary();
+    virtual ~ExampleLibrary() = default;
+    ExampleLibrary(ExampleLibrary&&) = delete;
+    ExampleLibrary& operator=(ExampleLibrary&&) = delete;
 
 public slots:
     void set_message(QString message = "");
 
 signals:
-    void tick(QString message);
+    void tick(QString message) const;
 
 protected:
     void timerEvent(QTimerEvent *event) override;
