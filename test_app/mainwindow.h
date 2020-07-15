@@ -28,6 +28,6 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
-    ExampleLibrary instance;
+    ExampleLibrary *instance;
 };
 #endif // MAINWINDOW_H
