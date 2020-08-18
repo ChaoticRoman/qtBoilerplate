@@ -36,14 +36,18 @@ new_topdir = Path.cwd() / libraryName / "src"
 # Dictionary of stuff to be deployed. Keys are original file paths relative
 # to original_topdir, values are tuples:
 #
-#     (new path relative to new_topdir, Substitution dictionary)
+#     (new path relative to new_topdir, Substitution tuples list)
 #
-# Substitution dictionary is simply a dict of {old_str: new_str, ...}.
+# Substitution tuples list is simply a list of (old_str, new_str}.
 #
 files2substitutions = {
     "boilerplate.pro": (
         libraryName + '.pro',
         [('library', libraryName)]
+    ),
+    ".gitignore": (
+        ".gitignore",
+        []
     ),
     "library/exampleLibrary.cpp": (
         libraryName + '/' + libraryName + '.cpp',
