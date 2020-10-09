@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent),
     ui->setupUi(this);
 
     connect(instance, &ExampleLibrary::tick, this, &MainWindow::appendText);
-    instance->set_message(".");
+    instance->setMessage(".");
 }
 
 MainWindow::~MainWindow() {

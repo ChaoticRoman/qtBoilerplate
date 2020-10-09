@@ -17,7 +17,7 @@ public:
     ExampleLibrary& operator=(ExampleLibrary&&) = delete;
 
 public slots:
-    void set_message(QString message = "");
+    void setMessage(QString message = "");
 
 signals:
     void tick(QString message) const;

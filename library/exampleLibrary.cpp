@@ -4,7 +4,7 @@
 
 ExampleLibrary::ExampleLibrary(QObject *parent) : QObject(parent) {}
 
-void ExampleLibrary::set_message(QString message) {
+void ExampleLibrary::setMessage(QString message) {
     message_ = message;
     if (message.isEmpty()) {
         if  (timerStarted_) {
