@@ -9,10 +9,11 @@ class ExampleLibrary : public QObject
 {
     Q_OBJECT
     Q_DISABLE_COPY(ExampleLibrary)
+    friend class TestExampleLibrary;
 
 public:
-    explicit ExampleLibrary(QObject *parent = nullptr);
-    virtual ~ExampleLibrary() = default;
+    ExampleLibrary(QObject *parent = nullptr);
+    ~ExampleLibrary() = default;
     ExampleLibrary(ExampleLibrary&&) = delete;
     ExampleLibrary& operator=(ExampleLibrary&&) = delete;
 

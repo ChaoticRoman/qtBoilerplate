@@ -1,18 +1,15 @@
 TEMPLATE = app
 
-QT += core widgets gui
+QT += core testlib
 
 CONFIG += c++14 warn_on
 
 DEFINES += QT_DEPRECATED_WARNINGS
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
 
-SOURCES += main.cpp
-SOURCES += mainwindow.cpp
+SOURCES += testExampleLibrary.cpp
 
-HEADERS += mainwindow.h
-
-FORMS += mainwindow.ui
+HEADERS += testExampleLibrary.h
 
 LIBS += -L../library/ -llibrary
 PRE_TARGETDEPS = ../library

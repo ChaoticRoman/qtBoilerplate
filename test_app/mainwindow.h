@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QString>
 
-#include "exampleLibrary.h"
+#include "../library/exampleLibrary.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

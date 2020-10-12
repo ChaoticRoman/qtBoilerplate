@@ -4,10 +4,11 @@
 #include <QObject>
 #include <QtTest/QtTest>
 
-class testExampleLibrary : public QObject
+class TestExampleLibrary : public QObject
 {
     Q_OBJECT
 private slots:
+    void testInitMessage();
     void testSetMessage();
 };
 
