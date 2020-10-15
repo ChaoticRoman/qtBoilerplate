@@ -1,10 +1,10 @@
-#ifndef TESTLIBRARY_H
-#define TESTLIBRARY_H
+#ifndef TESTLIBRARY2_H
+#define TESTLIBRARY2_H
 
 #include <QObject>
 #include <QtTest/QtTest>
 
-class TestExampleLibrary : public QObject
+class TestExampleLibrary2 : public QObject
 {
     Q_OBJECT
 
@@ -13,4 +13,4 @@ private slots:
     void testSetMessage();
 };
 
-#endif // TESTLIBRARY_H
+#endif // TESTLIBRARY2_H

@@ -22,3 +22,8 @@ void ExampleLibrary::timerEvent(QTimerEvent *event) {
     event->accept();
     emit tick(message_);
 }
+
+QString ExampleLibrary::message() const
+{
+    return message_;
+}

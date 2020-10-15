@@ -14,5 +14,3 @@ void TestExampleLibrary::testSetMessage()
     lib.setMessage("xyz");
     QCOMPARE(lib.message_, "xyz");
 }
-
-QTEST_MAIN(TestExampleLibrary)

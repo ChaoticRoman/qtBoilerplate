@@ -17,6 +17,8 @@ public:
     ExampleLibrary(ExampleLibrary&&) = delete;
     ExampleLibrary& operator=(ExampleLibrary&&) = delete;
 
+    QString message() const;
+
 public slots:
     void setMessage(QString message = "");
 
